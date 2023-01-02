@@ -1,5 +1,6 @@
-pipeline {
+pipeline{
     agent any
+    stages {
         stage('Clone') {
             steps{
                 bat ''' 
@@ -20,5 +21,6 @@ pipeline {
                     cd testJenkins/ && java Main
                 '''
             }
-       }
+        }
+    }
 }
